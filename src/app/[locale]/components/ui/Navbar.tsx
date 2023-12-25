@@ -2,7 +2,7 @@
 
 import { formatDate } from "@/helpers/formatdate";
 import SelectLenguage from "./SelectLenguaje";
-import Menu from '@/app/[locale]/components/svg/menu';
+import Menu from '@/app/[locale]/components/images/Menu'
 
 interface Props {
   locale: string;
