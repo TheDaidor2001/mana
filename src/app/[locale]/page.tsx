@@ -9,7 +9,7 @@ export default function Home() {
   const messages = useMessages();
   return (
     <>
-      <header className="max-w-7xl mx-auto mt-10">
+      <header className="max-w-7xl mx-auto mt-20">
         <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar locale={locale}/>
         </NextIntlClientProvider>
