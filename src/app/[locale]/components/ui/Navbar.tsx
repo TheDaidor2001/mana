@@ -15,15 +15,15 @@ function Navbar(props: Props) {
   const { locale } = props;
   
   return (
-      <nav >
-        <div className="flex justify-between items-center">
+      <nav className="">
+        <div className="flex justify-between items-center mb-10">
         <p className="text-sm  text-gray-800">{formatDate(date.toString(), locale)}</p>
         <SelectLenguage />
         </div>
         <div className="flex items-center">
           <Menu />
           <div className="flex-1">
-              <h1 className="mx-auto text-center text-4xl mt-5 font-bold">MANA</h1>
+              <h1 className="mx-auto text-center text-4xl font-bold">MANA</h1>
               <p className="text-center italic">Noticias de Guinea Ecuatorial</p>
           </div>
         
