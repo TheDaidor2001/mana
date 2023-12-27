@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import Link from "next/link";
+import Link from "next-intl/link";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -50,7 +50,7 @@ export default function SelectLenguage() {
             toggle ? "flex flex-col gap-2" : "hidden"
           }`}
         >
-          <Link href="/es" locale="es" className="flex items-center gap-1 text-gray-950">
+          <Link href="/" locale="es" className="flex items-center gap-1 text-gray-950">
             <Image
               width={20}
               height={5}
@@ -60,7 +60,7 @@ export default function SelectLenguage() {
             />
             ES
           </Link>
-          <Link href="/en" locale="en" className="flex items-center gap-1 text-gray-950">
+          <Link href="/" locale="en" className="flex items-center gap-1 text-gray-950">
             <Image
               width={20}
               height={5}

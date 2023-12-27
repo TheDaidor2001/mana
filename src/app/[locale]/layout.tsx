@@ -32,7 +32,7 @@ export default function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} max-w-7xl mx-auto` } >{children}</body>
+      <body className={`${inter.className} max-w-7xl mx-auto px-5` } >{children}</body>
     </html>
   )
 }
