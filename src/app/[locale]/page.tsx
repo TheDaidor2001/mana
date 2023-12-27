@@ -5,6 +5,8 @@ import Navbar from './components/ui/Navbar';
 import { NextIntlClientProvider, useLocale, useMessages } from 'next-intl'
 import Link from 'next-intl/link';
 import NewsPage from './components/ui/NewsPage';
+import Footer from './components/ui/Footer';
+import Separador from './components/ui/Separador';
 
 
 const filters = [
@@ -35,6 +37,7 @@ export default function Home() {
         </NextIntlClientProvider>
       </header>
       <NewsPage/>
+      <Footer />
     </>
   )
 }
