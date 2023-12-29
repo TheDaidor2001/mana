@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../globals.css'
 import { HTMLAttributes } from 'react';
-import { useLocale } from 'next-intl';
+import { NextIntlClientProvider, useLocale, useMessages } from 'next-intl';
 import { notFound } from 'next/navigation';
+import Navbar from './components/ui/Navbar';
+import Footer from './components/ui/Footer';
 
 
 
@@ -24,6 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, params }: Props) {
 
   const locale = useLocale();
+  const messages = useMessages()
 
   //show 404 Error if Idiom is not exist
   if (params.locale !== locale) {
@@ -32,7 +35,18 @@ export default function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} max-w-7xl mx-auto px-5` } >{children}</body>
+      <body className={`${inter.className} max-w-7xl mx-auto px-5` } >
+        
+        <header className="max-w-7xl mx-auto mt-20">
+            <NextIntlClientProvider locale={locale} messages={messages}>
+                <Navbar locale={locale}/>
+            </NextIntlClientProvider>
+        </header>
+        
+          {children}
+
+        <Footer />
+      </body>
     </html>
   )
 }
