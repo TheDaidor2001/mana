@@ -113,11 +113,7 @@ export default async function SlugNotices({params}:Props) {
                         className='w-full h-auto rounded-md'
                       />
                     </div>
-                    <Link
-                        href={`/news/${slug}`}
-                      >
-                      <TitleNew title={titulo}/>
-                    </Link>
+                      <TitleNew slug={slug} title={titulo}/>
                 </article>
                 )
                })
