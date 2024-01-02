@@ -5,8 +5,12 @@ import TitleIndex from '../../components/ui/TitleIndex';
 import TitleNew from '../../components/ui/TitleNew';
 import { fetchApi } from '@/helpers/fetch-api';
 import { Noticia } from '@/interfaces/noticia.interfaces';
+import {Noticias} from '@/interfaces/noticia.interfaces'
 import notFound from '../../[...not-found]/page';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import Link from 'next-intl/link';
+
+
 
 interface Props {
   params: {
@@ -29,10 +33,37 @@ const getPost = async (slug: string, locale: string) => {
   return data[0];
 };
 
+const getNews = async (start = 1, locale = "", pageSize = 4) => {
+  const path = "/noticias";
+  const urlParamsObjet = {
+    populate: "image",
+    sort: {
+      createdAt: "asc",
+    },
+    pagination: {
+      page: start,
+      pageSize: pageSize,
+    },
+    locale,
+  };
+
+  const { data } = await fetchApi(path, urlParamsObjet);
+
+  return {
+    data,
+  };
+};
+
 
 export default async function SlugNotices({params}:Props) {
   const locale = useLocale();
   const post: Noticia = await getPost(params.slug, locale);
+  const {data} = await getNews(1, locale);
+  console.log(data);
+  
+
+  
+  
 
   if (!post || Object.keys(post).length === 0) {
     return notFound();
@@ -65,23 +96,34 @@ export default async function SlugNotices({params}:Props) {
 
         <section className='my-20'>
             <TitleIndex title='Ultimas Noticias'/>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-10 mt-10'>
-                <article className='flex flex-col gap-5'>
-                    <div className='bg-red-500 w-full h-40'></div>
-                    <TitleNew title='La Fiscalía constata que unos 200 menores migrantes fueron mezclados con adultos en Canarias'/>
+            <div className='grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-4 items-center gap-10 mt-10'>
+
+              {
+               data.map((noticia:Noticia) => {
+                const {titulo,slug, image,} = noticia.attributes;
+                const {url,height,width} = image.data.attributes.formats.medium
+                return (
+
+                <article className='flex flex-col items-center gap-5 max-h-none lg:max-h-44' key={titulo}>
+                    <div className='object-cover'>
+                      <Image 
+                        height={height}
+                        width={width}
+                        alt={titulo}
+                        src={url}
+                        className='w-full h-auto rounded-md'
+                      />
+                    </div>
+                    <Link
+                        href={`/news/${slug}`}
+                      >
+                      <TitleNew title={titulo}/>
+                    </Link>
                 </article>
-                <article className='flex flex-col gap-3'>
-                    <div className='bg-red-500 w-full h-40'></div>
-                    <TitleNew title='La Fiscalía constata que unos 200 menores migrantes fueron mezclados con adultos en Canarias'/>
-                </article>
-                <article className='flex flex-col gap-3'>
-                    <div className='bg-red-500 w-full h-40'></div>
-                    <TitleNew title='La Fiscalía constata que unos 200 menores migrantes fueron mezclados con adultos en Canarias'/>
-                </article>
-                <article className='flex flex-col gap-3'>
-                    <div className='bg-red-500 w-full h-40'></div>
-                    <TitleNew title='La Fiscalía constata que unos 200 menores migrantes fueron mezclados con adultos en Canarias'/>
-                </article>
+                )
+               })
+              }
+                
             </div>
         </section>
       </main>
