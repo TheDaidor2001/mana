@@ -5,7 +5,6 @@ import TitleIndex from '../../components/ui/TitleIndex';
 import TitleNew from '../../components/ui/TitleNew';
 import { fetchApi } from '@/helpers/fetch-api';
 import { Noticia } from '@/interfaces/noticia.interfaces';
-import {Noticias} from '@/interfaces/noticia.interfaces'
 import notFound from '../../[...not-found]/page';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Link from 'next-intl/link';
@@ -38,7 +37,7 @@ const getNews = async (start = 1, locale = "", pageSize = 4) => {
   const urlParamsObjet = {
     populate: "image",
     sort: {
-      createdAt: "asc",
+      createdAt: "desc",
     },
     pagination: {
       page: start,
