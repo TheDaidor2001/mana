@@ -35,15 +35,18 @@ export default function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body className={`${inter.className} max-w-7xl mx-auto px-5` } >
-        
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-2420612436873886" />
+      </head>
+      <body className={`${inter.className} max-w-7xl mx-auto px-5`} >
+
         <header className="max-w-7xl mx-auto mt-20">
-            <NextIntlClientProvider locale={locale} messages={messages}>
-                <Navbar locale={locale}/>
-            </NextIntlClientProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navbar locale={locale} />
+          </NextIntlClientProvider>
         </header>
-        
-          {children}
+
+        {children}
 
         <Footer />
       </body>
