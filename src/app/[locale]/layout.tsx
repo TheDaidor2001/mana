@@ -20,7 +20,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Malabo Nation - Web infomativa en Guinea Ecuatorial',
-  description: 'Somos una web de noticias e información en Guinea Ecuatorial. Toda la información del Pais en malabo nation',
+  description: 'Somos una web de noticias e información en Guinea Ecuatorial. Toda la información del Pais en malabo nation.',
 }
 
 export default function RootLayout({ children, params }: Props) {
@@ -28,7 +28,7 @@ export default function RootLayout({ children, params }: Props) {
   const locale = useLocale();
   const messages = useMessages()
 
-  //show 404 Error if Idiom is not exist
+  //show 404 Error if  is not exist
   if (params.locale !== locale) {
     notFound();
   }
