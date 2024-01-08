@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { fetchApi } from "@/helpers/fetch-api";
 import TitleNew from "./TitleNew";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next-intl/link";
 import Separador from "./Separador";
 import { Noticia } from '@/interfaces/noticia.interfaces';
@@ -9,6 +9,7 @@ import NewsSections from "./NewsSection";
 import DeportesSection from "./DeportesSection";
 import EmpresaSection from './EmpresaSection';
 import { LinkCategory } from "./LinkCategory";
+import { Header } from "./Header";
 
 
 const getNews = async (start = 1, locale = "", pageSize = 3) => {
@@ -73,24 +74,7 @@ export default async function NewsPage() {
 
   return (
     <main className="max-w-7xl mx-auto px-5">
-      <section className="hidden border-b border-gray-700 w-full md:flex justify-center gap-5 my-14 pb-3">
-        <Link
-          href="/deportes"
-          className="hover:underline transition-all"
-        >Deportes</Link>
-        <Link
-          href="/"
-          className="hover:underline transition-all"
-        >Actualidad</Link>
-        <Link
-          href="/"
-          className="hover:underline transition-all"
-        >Empresas</Link>
-        <Link
-          href="/"
-          className="hover:underline transition-all"
-        >Opinión</Link>
-      </section>
+      <Header />
       <section className='flex flex-col-reverse xl:grid xl:grid-cols-4 grid-flow-row-dense mt-10 gap-10'>
 
         <div className='flex flex-col border-t xl:border-t-transparent pt-5 xl:pt-0 xl:border-r border-gray-300 gap-5'>

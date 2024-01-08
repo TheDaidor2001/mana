@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props) {
     return {
       title: `Mana - ${data[0].attributes.titulo}`,
       description: data[0].attributes.subtitulo,
+      keywords: `Mana, Noticias, Guinea Ecuatorial, África, ${data[0].attributes.filtros}`
     }
   } catch (error) {
     return {

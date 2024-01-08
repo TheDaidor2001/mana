@@ -16,7 +16,7 @@ export default function TitleNew(props: Props) {
         href={`/news/${slug}`}
         locale={locale}
       >
-        <h3 className={`${classes} font-bold hover:text-gray-700 transition-colors `}><span className='bg-yellow-400 rounded-md px-2 py-1 text-xs text-black font-bold mr-2'>M</span>{title} </h3>
+        <h3 className={`${classes} font-bold hover:text-gray-700 transition-colors title`}><span className='bg-yellow-400 rounded-md px-2 py-1 text-xs text-black font-bold mr-2'>M</span>{title} </h3>
       </Link>
     </div>
   )
