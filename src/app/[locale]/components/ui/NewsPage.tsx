@@ -4,11 +4,11 @@ import TitleNew from "./TitleNew";
 import { useLocale } from "next-intl";
 import Link from "next-intl/link";
 import Separador from "./Separador";
-import TitleIndex from "./TitleIndex";
 import { Noticia } from '@/interfaces/noticia.interfaces';
 import NewsSections from "./NewsSection";
 import DeportesSection from "./DeportesSection";
 import EmpresaSection from './EmpresaSection';
+import { LinkCategory } from "./LinkCategory";
 
 
 const getNews = async (start = 1, locale = "", pageSize = 3) => {
@@ -31,6 +31,7 @@ const getNews = async (start = 1, locale = "", pageSize = 3) => {
     data,
   };
 };
+
 const getOpinionNews = async (start = 1, locale = "", pageSize = 3) => {
   const path = "/noticias";
   const urlParamsObjet = {
@@ -95,11 +96,12 @@ export default async function NewsPage() {
         <div className='flex flex-col border-t xl:border-t-transparent pt-5 xl:pt-0 xl:border-r border-gray-300 gap-5'>
           {
             slicedData.map((newData: Noticia) => {
-              const { titulo, subtitulo, slug } = newData.attributes
+              const { titulo, subtitulo, slug, filtros } = newData.attributes
               return (
                 <div className='row-span-1 mr-5' key={newData.id}>
-                  <TitleNew slug={slug} classes='text-lg hover:text-yellow-500 transition-colors' title={titulo} />
-                  <p className='mt-2 text-md text-gray-700'>{subtitulo}</p>
+                  <TitleNew slug={slug} classes='text-lg' title={titulo} />
+                  <p className='mt-2 text-md text-gray-700 mb-2'>{subtitulo}</p>
+                  <LinkCategory filtros={filtros} locale={locale} />
                 </div>
               )
             })
@@ -113,8 +115,9 @@ export default async function NewsPage() {
             alt={firstNew.titulo}
             src={firstNew.image.data.attributes.formats.medium.url}
           />
-          <TitleNew slug={firstNew.slug} classes='mt-5 text-4xl xl:text-2xl hover:text-yellow-500 transition-colors' title={firstNew.titulo} />
-          <p className='mt-2 text-md text-gray-700'>{firstNew.subtitulo}</p>
+          <TitleNew slug={firstNew.slug} classes='mt-5 text-2xl xl:text-3xl' title={firstNew.titulo} />
+          <p className='my-2 text-md text-gray-700'>{firstNew.subtitulo}</p>
+          <LinkCategory filtros={firstNew.filtros} locale={locale} />
         </div>
         <div className='hidden border-t-8 border-black xl:flex flex-col gap-5'>
           <h2 className='font-extrabold text-3xl mt-3'>Opinión</h2>
@@ -122,11 +125,12 @@ export default async function NewsPage() {
             <div className='bg-black w-60 h-1' />
           </div>
           {opinionData.map((newData: Noticia) => {
-            const { titulo, subtitulo, slug } = newData.attributes
+            const { titulo, subtitulo, slug, filtros } = newData.attributes
             return (
               <article key={newData.id}>
-                <TitleNew slug={slug} classes='text-lg hover:text-yellow-500 transition-colors' title={titulo} />
-                <p className='mt-2 text-md text-gray-700'>{subtitulo}</p>
+                <TitleNew slug={slug} classes='text-lg' title={titulo} />
+                <p className='my-2 text-md text-gray-700'>{subtitulo}</p>
+                <LinkCategory filtros={filtros} locale={locale} />
               </article>
             )
           })}

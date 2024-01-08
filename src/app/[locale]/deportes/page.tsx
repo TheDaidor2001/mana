@@ -7,6 +7,12 @@ import Link from "next/link";
 import ArticleNews from "../components/ui/ArticleNews";
 
 
+export const metadata = {
+    title: 'Malabo Nations - Deportes',
+    description: 'Las ultimas noticias de deporte nacional e internacional en Malabo Nations',
+};
+
+
 const getOpinionNews = async (start = 1, locale = "", pageSize = 10) => {
     const path = "/noticias";
     const urlParamsObjet = {

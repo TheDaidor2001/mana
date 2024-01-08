@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props) {
     const { data } = await fetchApi(path, urlParamsObjet);
 
     return {
-      title: data[0].attributes.titulo,
+      title: `Mana - ${data[0].attributes.titulo}`,
       description: data[0].attributes.subtitulo,
     }
   } catch (error) {
@@ -124,7 +124,7 @@ export default async function SlugNotices({ params }: Props) {
 
             {
               data.map((noticia: Noticia) => {
-                const { titulo, slug, image, } = noticia.attributes;
+                const { titulo, slug, image, subtitulo } = noticia.attributes;
                 const { url, height, width } = image.data.attributes.formats.medium
                 return (
 
@@ -139,6 +139,7 @@ export default async function SlugNotices({ params }: Props) {
                       />
                     </div>
                     <TitleNew slug={slug} title={titulo} />
+                    <p className='text-sm text-gray-800'>{subtitulo}</p>
                   </article>
                 )
               })
