@@ -130,7 +130,7 @@ export default async function NewsPage() {
             {opinionData.map((newData: Noticia) => {
               const { titulo, subtitulo, slug, filtros } = newData.attributes
               return (
-                <article key={newData.id}>
+                <article key={newData.id} className="border-r-0 md:border-r md:border-gray-300 pr-3 last:border-none">
                   <TitleNew slug={slug} classes='text-lg' title={titulo} />
                   <p className='my-2 text-md text-gray-700'>{subtitulo}</p>
                 </article>
