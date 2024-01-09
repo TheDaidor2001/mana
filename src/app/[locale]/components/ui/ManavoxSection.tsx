@@ -46,13 +46,13 @@ export default async function ManavoxSection() {
                         const { titulo, slug, subtitulo, filtros, image } = items.attributes
                         const { url, height, width } = image.data.attributes.formats.medium
                         return (
-                            <article key={items.id} className="flex gap-5 mt-10">
+                            <article key={items.id} className="flex flex-col lg:flex-row gap-5 mt-10">
                                 <Image
                                     height={height}
                                     width={width}
                                     alt={`Imagen de la noticia ${titulo}`}
                                     src={url}
-                                    className="rounded w-1/2 h-auto aspect-video"
+                                    className="rounded w-full lg:w-1/2 h-auto aspect-video"
                                     loading="lazy"
                                 />
                                 <div>
