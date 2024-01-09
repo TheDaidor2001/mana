@@ -22,11 +22,11 @@ export const Header = () => {
                 className="hover:underline transition-all text-sm"
             >{t('header-text-4')}</Link>
             <Link
-                href="/"
+                href="/geopolitica"
                 className="hover:underline transition-all text-sm"
             >{t('header-text-5')}</Link>
             <Link
-                href="/"
+                href="/manavox"
                 className="hover:underline transition-all text-sm"
             >{t('header-text-6')}</Link>
         </section>
