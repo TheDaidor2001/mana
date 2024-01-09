@@ -49,6 +49,7 @@ export async function EconomiaSection() {
                         alt={`Imagen de la noticia ${data[0].attributes.titulo}`}
                         src={data[0].attributes.image.data.attributes.formats.medium.url}
                         className="rounded w-full h-auto"
+                        loading="lazy"
                     />
                     <TitleNew classes="mt-2 mb-3 text-lg" slug={data[0].attributes.slug} title={data[0].attributes.titulo} />
                     <LinkCategory filtros={data[0].attributes.filtros} locale={locale} />
@@ -64,6 +65,7 @@ export async function EconomiaSection() {
                         alt={`Imagen de la noticia ${data[1].attributes.titulo}`}
                         src={data[1].attributes.image.data.attributes.formats.medium.url}
                         className="rounded w-full h-auto mb-3"
+                        loading="lazy"
                     />
                     <LinkCategory filtros={data[1].attributes.filtros} locale={locale} />
                     <p className='mt-4 text-sm text-gray-700 mb-2'>{data[1].attributes.subtitulo}</p>
@@ -75,6 +77,7 @@ export async function EconomiaSection() {
                         alt={`Imagen de la noticia ${data[2].attributes.titulo}`}
                         src={data[2].attributes.image.data.attributes.formats.medium.url}
                         className="rounded w-full h-auto"
+                        loading="lazy"
                     />
                     <TitleNew classes="mt-2 mb-3 text-lg" slug={data[2].attributes.slug} title={data[2].attributes.titulo} />
                     <LinkCategory filtros={data[2].attributes.filtros} locale={locale} />
