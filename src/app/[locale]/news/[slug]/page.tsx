@@ -1,13 +1,10 @@
 import Image from 'next/image';
 import { useLocale } from 'next-intl'
-
 import TitleIndex from '../../components/ui/TitleIndex';
-import TitleNew from '../../components/ui/TitleNew';
 import { fetchApi } from '@/helpers/fetch-api';
 import { Noticia } from '@/interfaces/noticia.interfaces';
 import notFound from '../../[...not-found]/page';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import Link from 'next-intl/link';
 import { LastNews } from '../../components/ui/LastNews';
 
 

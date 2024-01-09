@@ -45,7 +45,7 @@ export default async function NewsSections() {
           <article className="border-b border-gray-300 pb-5">
             <TitleNew slug={data[0].attributes.slug} classes='mt-5 text-lg' title={data[0].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[0].attributes.subtitulo}</p>
-            <LinkCategory filtros={data[0].attributes.filtros} locale={locale} />
+
           </article>
           <article className="border-b border-gray-300 pb-5">
             <Image
@@ -58,7 +58,7 @@ export default async function NewsSections() {
             />
             <TitleNew slug={data[1].attributes.slug} classes='mt-5 text-lg' title={data[1].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[1].attributes.subtitulo}</p>
-            <LinkCategory filtros={data[1].attributes.filtros} locale={locale} />
+
           </article>
           <article className="border-b border-gray-300 pb-5">
             <Image
@@ -71,12 +71,12 @@ export default async function NewsSections() {
             />
             <TitleNew slug={data[2].attributes.slug} classes='mt-5 text-lg' title={data[2].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[2].attributes.titulo}</p>
-            <LinkCategory filtros={data[2].attributes.filtros} locale={locale} />
+
           </article>
           <article className="pb-5">
             <TitleNew slug={data[3].attributes.slug} classes='mt-5 text-lg' title={data[3].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[3].attributes.subtitulo}</p>
-            <LinkCategory filtros={data[3].attributes.filtros} locale={locale} />
+
           </article>
         </div>
         <div className="flex flex-col gap-5">
@@ -92,17 +92,17 @@ export default async function NewsSections() {
             <TitleNew slug={data[4].attributes.slug} classes='mt-5 text-lg' title={data[4].attributes.titulo} />
             <p className='my-2 text-md 
             text-gray-700'>{data[4].attributes.subtitulo}</p>
-            <LinkCategory filtros={data[4].attributes.filtros} locale={locale} />
+
           </article>
           <article className="border-b border-gray-300 pb-5">
             <TitleNew slug={data[5].attributes.slug} classes='mt-5 text-lg' title={data[5].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[5].attributes.subtitulo}</p>
-            <LinkCategory filtros={data[5].attributes.filtros} locale={locale} />
+
           </article>
           <article className="border-b border-gray-300 pb-5">
             <TitleNew slug={data[6].attributes.slug} classes='mt-5 text-lg' title={data[6].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[6].attributes.subtitulo}</p>
-            <LinkCategory filtros={data[6].attributes.filtros} locale={locale} />
+
           </article>
           <article className="pb-5">
             <Image
@@ -115,7 +115,7 @@ export default async function NewsSections() {
             />
             <TitleNew slug={data[7].attributes.slug} classes='mt-5 text-lg' title={data[7].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[7].attributes.subtitulo}</p>
-            <LinkCategory filtros={data[7].attributes.filtros} locale={locale} />
+
           </article>
         </div>
       </div>

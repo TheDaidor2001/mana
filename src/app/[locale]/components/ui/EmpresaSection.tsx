@@ -61,7 +61,7 @@ export default async function EmpresaSection() {
                 />
 
                 <TitleNew slug={slug} classes="mt-5 text-md md:text-lg mb-3" title={titulo} />
-                <LinkCategory filtros={filtros} locale={locale} />
+
                 <p className='mt-5 text-sm text-gray-700'>{subtitulo}</p>
 
               </article>

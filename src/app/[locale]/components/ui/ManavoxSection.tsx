@@ -5,7 +5,6 @@ import { useLocale } from "next-intl";
 import { Noticia } from "@/interfaces/noticia.interfaces";
 import Image from "next/image";
 import TitleNew from "./TitleNew";
-import { LinkCategory } from "./LinkCategory";
 
 const getNews = async (start = 1, locale = "", pageSize = 4) => {
     const path = "/noticias";
@@ -36,7 +35,6 @@ export default async function ManavoxSection() {
 
     const locale = useLocale()
     const { data } = await getNews(1, locale, 9)
-    console.log(data);
 
     return (
         <section className="my-20">
@@ -59,7 +57,6 @@ export default async function ManavoxSection() {
                                 />
                                 <div>
                                     <TitleNew classes="mt-2 mb-3 text-lg" slug={slug} title={titulo} />
-                                    <LinkCategory filtros={filtros} locale={locale} />
                                     <p className='mt-4 text-sm text-gray-700 mb-2'>{data[0].attributes.subtitulo}</p>
                                 </div>
                             </article>

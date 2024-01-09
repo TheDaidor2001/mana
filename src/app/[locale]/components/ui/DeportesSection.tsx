@@ -53,31 +53,31 @@ export default async function DeportesSection() {
           />
           <TitleNew slug={data[0].attributes.slug} classes="mt-5 text-3xl" title={data[0].attributes.titulo} />
           <p className='my-2 text-md text-gray-700'>{data[0].attributes.subtitulo}</p>
-          <LinkCategory filtros={data[0].attributes.filtros} locale={locale} />
+
         </article>
         <div className="flex flex-col md:flex-row gap-5">
           <div className="border-r lg:border-gray-400">
             <article className="border-b border-gray-300 pb-5 mr-5">
               <TitleNew slug={data[1].attributes.slug} classes="mt-5 text-lg" title={data[1].attributes.titulo} />
               <p className='my-2 text-sm text-gray-700'>{data[1].attributes.subtitulo}</p>
-              <LinkCategory filtros={data[1].attributes.filtros} locale={locale} />
+
             </article>
             <article className="border-b border-gray-300 pb-5 mr-5">
               <TitleNew slug={data[2].attributes.slug} classes="mt-5 text-lg" title={data[2].attributes.titulo} />
               <p className='my-2 text-sm text-gray-700'>{data[2].attributes.subtitulo}</p>
-              <LinkCategory filtros={data[2].attributes.filtros} locale={locale} />
+
             </article>
           </div>
           <div>
             <article className="border-b border-gray-300 pb-5">
               <TitleNew slug={data[3].attributes.slug} classes="mt-5 text-lg" title={data[3].attributes.titulo} />
               <p className='my-2 text-sm text-gray-700'>{data[3].attributes.subtitulo}</p>
-              <LinkCategory filtros={data[3].attributes.filtros} locale={locale} />
+
             </article>
             <article className="border-b border-gray-300 pb-5">
               <TitleNew slug={data[4].attributes.slug} classes="mt-5 text-lg" title={data[4].attributes.titulo} />
               <p className='my-2 text-sm text-gray-700'>{data[4].attributes.subtitulo}</p>
-              <LinkCategory filtros={data[4].attributes.filtros} locale={locale} />
+
             </article>
           </div>
         </div>

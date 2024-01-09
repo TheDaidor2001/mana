@@ -1,10 +1,10 @@
 import { fetchApi } from "@/helpers/fetch-api";
 import TitleIndex from "../components/ui/TitleIndex"
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { Noticia } from "@/interfaces/noticia.interfaces";
-import Link from "next/link";
 import ArticleNews from "../components/ui/ArticleNews";
+import { TopTextPages } from '../components/ui/TopTextPages';
 
 
 export const metadata = {
@@ -47,7 +47,7 @@ async function DeportesPage() {
     return (
         <>
             <section className="py-10">
-                <TitleIndex title="Deportes" />
+                <TopTextPages text="header-text-1" />
                 <article className=" border-b border-gray-600 flex flex-col lg:flex-row space-y-10 py-10">
                     <div className="m-auto">
                         <h1 className="text-3xl lg:text-4xl font-extrabold text-pretty">{data[0].attributes.titulo}</h1>

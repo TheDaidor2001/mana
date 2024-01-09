@@ -47,7 +47,7 @@ async function Manavox() {
     return (
         <>
             <section className="py-10">
-                <TitleIndex title="Manavox - Proyecto de Gala" />
+                <TitleIndex title="Manavox" />
                 <article className=" border-b border-gray-600 flex flex-col gap-10 lg:flex-row space-y-10 py-10">
                     <div className="m-auto">
                         <h1 className="border-b text-xl text-text-pretty font-extrabold mb-10">Última Noticia</h1>
