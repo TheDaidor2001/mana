@@ -99,7 +99,6 @@ export default async function SlugNotices({ params }: Props) {
 
       <main>
         <section className='mt-10'>
-          <TitleIndex title={filtros} />
           <h1 className='font-bold mt-10 mb-5 text-3xl lg:text-5xl '><span className='bg-yellow-400 rounded-md px-2 py-1 text-xs text-black font-bold mr-2'>M</span>{titulo}</h1>
           <p className='mt-2 text-md lg:text-xl my-10 text-gray-800'>{subtitulo}</p>
           <Image
