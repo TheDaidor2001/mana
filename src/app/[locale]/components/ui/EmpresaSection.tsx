@@ -57,6 +57,7 @@ export default async function EmpresaSection() {
                   alt={`Imagen de la noticia ${titulo}`}
                   src={url}
                   className="rounded"
+                  loading="lazy"
                 />
 
                 <TitleNew slug={slug} classes="mt-5 text-md md:text-lg mb-3" title={titulo} />
