@@ -3,7 +3,6 @@ import TitleIndex from "./TitleIndex";
 import TitleNew from "./TitleNew";
 import { useLocale } from "next-intl";
 import Image from "next/image";
-import { LinkCategory } from "./LinkCategory";
 
 const getNews = async (start = 1, locale = "", pageSize = 9, info = "") => {
   const path = "/noticias";

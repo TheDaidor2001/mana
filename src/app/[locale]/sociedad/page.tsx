@@ -1,5 +1,4 @@
 import { fetchApi } from "@/helpers/fetch-api";
-import TitleIndex from "../components/ui/TitleIndex"
 import { useLocale } from "next-intl";
 import Image from "next/image";
 import { Noticia } from "@/interfaces/noticia.interfaces";
@@ -15,6 +14,7 @@ export const metadata = {
 
 
 const getOpinionNews = async (start = 1, locale = "", pageSize = 10) => {
+
     const path = "/noticias";
     const urlParamsObjet = {
         populate: "image",
@@ -32,7 +32,7 @@ const getOpinionNews = async (start = 1, locale = "", pageSize = 10) => {
     };
 
     const { data } = await fetchApi(path, urlParamsObjet);
-
+    throw Error('error')
     return {
         data,
     };
