@@ -33,13 +33,13 @@ const getNews = async (start = 1, locale = "", pageSize = 9, info = "") => {
 export default async function NewsSections() {
   const locale = useLocale()
 
-  const { data } = await getNews(1, locale, 9, 'actualidad')
+  const { data } = await getNews(1, locale, 9, 'geopolitica')
 
 
 
   return (
     <section className="my-20">
-      <TitleIndex title="Actualidad" />
+      <TitleIndex title="Geopolítica" />
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-20 mt-10">
         <div className="flex flex-col gap-5">
           <article className="border-b border-gray-300 pb-5">
@@ -71,7 +71,7 @@ export default async function NewsSections() {
             <p className='my-2 text-md text-gray-700'>{data[2].attributes.titulo}</p>
             <LinkCategory filtros={data[2].attributes.filtros} locale={locale} />
           </article>
-          <article className="border-b border-gray-300 pb-5">
+          <article className="pb-5">
             <TitleNew slug={data[3].attributes.slug} classes='mt-5 text-lg' title={data[3].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[3].attributes.subtitulo}</p>
             <LinkCategory filtros={data[3].attributes.filtros} locale={locale} />
@@ -115,6 +115,6 @@ export default async function NewsSections() {
           </article>
         </div>
       </div>
-    </section>
+    </section >
   )
 }

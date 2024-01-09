@@ -36,13 +36,13 @@ export default async function EmpresaSection() {
 
   const locale = useLocale()
 
-  const { data } = await getNews(1, locale, 9, 'empresas')
+  const { data } = await getNews(1, locale, 9, 'sociedad')
 
 
   return (
     <section className="my-20">
       <Separador />
-      <TitleIndex title="Empresas" />
+      <TitleIndex title="Sociedad" />
       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-10 mt-10">
         {
           data.map((noticia: Noticia) => {
