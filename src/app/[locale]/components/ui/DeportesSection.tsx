@@ -49,6 +49,7 @@ export default async function DeportesSection() {
             alt={data[0].attributes.titulo}
             src={data[0].attributes.image.data.attributes.formats.medium.url}
             className="w-full h-auto"
+            loading="lazy"
           />
           <TitleNew slug={data[0].attributes.slug} classes="mt-5 text-3xl" title={data[0].attributes.titulo} />
           <p className='my-2 text-md text-gray-700'>{data[0].attributes.subtitulo}</p>
