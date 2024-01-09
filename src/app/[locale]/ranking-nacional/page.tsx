@@ -8,8 +8,8 @@ import { TopTextPages } from "../components/ui/TopTextPages";
 
 
 export const metadata = {
-    title: 'Malabo Nations - Deportes',
-    description: 'Las ultimas noticias de deporte nacional e internacional en Malabo Nations',
+    title: 'Malabo Nations - Ranking Nacional',
+    description: 'Las ultimas noticias del Ranking Nacional. Conoce las mejores empresas de Guinea Ecuatorial.',
 };
 
 

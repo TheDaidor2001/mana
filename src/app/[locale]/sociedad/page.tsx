@@ -8,8 +8,8 @@ import { TopTextPages } from "../components/ui/TopTextPages";
 
 
 export const metadata = {
-    title: 'Malabo Nations - Deportes',
-    description: 'Las ultimas noticias de deporte nacional e internacional en Malabo Nations',
+    title: 'Malabo Nations - Sociedad',
+    description: 'Las ultimas noticias de actualidad y sociedad a nivel nacional e internacional en Malabo Nations',
 };
 
 

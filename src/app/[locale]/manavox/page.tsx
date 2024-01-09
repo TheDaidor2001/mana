@@ -8,8 +8,8 @@ import TitleNew from "../components/ui/TitleNew";
 
 
 export const metadata = {
-    title: 'Malabo Nations - Deportes',
-    description: 'Las ultimas noticias de deporte nacional e internacional en Malabo Nations',
+    title: 'Malabo Nations - Manavox',
+    description: 'Las ultimas noticias de Manavox nacional e internacional en Malabo Nations',
 };
 
 
