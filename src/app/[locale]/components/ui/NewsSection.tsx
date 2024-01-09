@@ -54,6 +54,7 @@ export default async function NewsSections() {
               alt={data[1].attributes.titulo}
               src={data[1].attributes.image.data.attributes.formats.medium.url}
               className="w-full h-auto"
+              loading="lazy"
             />
             <TitleNew slug={data[1].attributes.slug} classes='mt-5 text-lg' title={data[1].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[1].attributes.subtitulo}</p>
@@ -66,6 +67,7 @@ export default async function NewsSections() {
               alt={data[2].attributes.titulo}
               src={data[2].attributes.image.data.attributes.formats.medium.url}
               className="w-full h-auto"
+              loading="lazy"
             />
             <TitleNew slug={data[2].attributes.slug} classes='mt-5 text-lg' title={data[2].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[2].attributes.titulo}</p>
@@ -85,6 +87,7 @@ export default async function NewsSections() {
               alt={data[4].attributes.titulo}
               src={data[4].attributes.image.data.attributes.formats.medium.url}
               className="w-full h-auto"
+              loading="lazy"
             />
             <TitleNew slug={data[4].attributes.slug} classes='mt-5 text-lg' title={data[4].attributes.titulo} />
             <p className='my-2 text-md 
@@ -108,6 +111,7 @@ export default async function NewsSections() {
               alt={data[7].attributes.titulo}
               src={data[7].attributes.image.data.attributes.formats.medium.url}
               className="w-full h-auto"
+              loading="lazy"
             />
             <TitleNew slug={data[7].attributes.slug} classes='mt-5 text-lg' title={data[7].attributes.titulo} />
             <p className='my-2 text-md text-gray-700'>{data[7].attributes.subtitulo}</p>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import TitleNew from "./TitleNew";
 
 
 interface Props {
@@ -19,14 +20,11 @@ export default function ArticleNews(props: Props) {
                 src={url}
                 alt={titulo}
                 className="w-full rounded-sm"
+                loading="lazy"
             />
             <div className="flex flex-col">
-                <Link
-                    href={`/news/${slug}`}
-                >
-                    <h2 className="text-2xl font-bold text-balance">{titulo}</h2>
-                </Link>
-                <p className="text-sm mt-5 font-light">{subtitulo}</p>
+                <TitleNew slug={slug} classes='text-2xl' title={titulo} />
+                <p className="text-md mt-5 font-light">{subtitulo}</p>
             </div>
         </article>
     )

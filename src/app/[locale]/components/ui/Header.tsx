@@ -10,15 +10,15 @@ export const Header = () => {
                 className="hover:underline transition-all text-sm"
             >{t('header-text-1')}</Link>
             <Link
-                href="/"
+                href="/ranking-nacional"
                 className="hover:underline transition-all text-sm"
             >{t('header-text-2')}</Link>
             <Link
-                href="/"
+                href="/sociedad"
                 className="hover:underline transition-all text-sm"
             >{t('header-text-3')}</Link>
             <Link
-                href="/"
+                href="/economia"
                 className="hover:underline transition-all text-sm"
             >{t('header-text-4')}</Link>
             <Link

@@ -101,6 +101,7 @@ export default async function NewsPage() {
             className="w-full h-auto"
             alt={firstNew.titulo}
             src={firstNew.image.data.attributes.formats.medium.url}
+
           />
           <TitleNew slug={firstNew.slug} classes='mt-5 text-2xl xl:text-3xl' title={firstNew.titulo} />
           <p className='my-2 text-md text-gray-700'>{firstNew.subtitulo}</p>
