@@ -19,7 +19,7 @@ export default function Footer({ locale }: Props) {
         <LinksPage classes="border-r border-gray-400 pr-3 text-lg" text={t('header-text-3')} urlPath="/sociedad" />
         <LinksPage classes="border-r border-gray-400 pr-3 text-lg" text={t('header-text-4')} urlPath="/economia" />
         <LinksPage classes="border-r border-gray-400 pr-3 text-lg" text={t('header-text-5')} urlPath="/geopolitica" />
-        <LinksPage classes="border-r border-gray-400 pr-3 text-lg" text={t('header-text-6')} urlPath="/manavox" />
+        <LinksPage classes="text-lg" text={t('header-text-6')} urlPath="/manavox" />
       </div>
     </footer>
   )
