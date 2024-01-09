@@ -6,6 +6,7 @@ import { NextIntlClientProvider, useLocale, useMessages } from 'next-intl';
 import { notFound } from 'next/navigation';
 import Navbar from './components/ui/Navbar';
 import Footer from './components/ui/Footer';
+import NextTopLoader from 'nextjs-toploader';
 
 
 
@@ -40,7 +41,10 @@ export default function RootLayout({ children, params }: Props) {
         <meta name="google-adsense-account" content="ca-pub-2420612436873886" />
       </head>
       <body className={`${inter.className} max-w-7xl mx-auto px-5`} >
-
+        <NextTopLoader
+          color='#eab308'
+          height={3}
+        />
         <header className="max-w-7xl mx-auto mt-20">
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar locale={locale} />
@@ -49,7 +53,9 @@ export default function RootLayout({ children, params }: Props) {
 
         {children}
 
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Footer locale={locale} />
+        </NextIntlClientProvider>
       </body>
     </html>
   )

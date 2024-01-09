@@ -43,7 +43,7 @@ const getOpinionNews = async (start = 1, locale = "", pageSize = 3) => {
       createdAt: "asc",
     },
     filters: {
-      filtros: 'ranking nacional',
+      filtros: 'ranking-nacional',
     },
     pagination: {
       page: start,

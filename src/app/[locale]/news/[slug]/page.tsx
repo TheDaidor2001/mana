@@ -85,7 +85,6 @@ export default async function SlugNotices({ params }: Props) {
   const locale = useLocale();
   const post: Noticia = await getPost(params.slug, locale);
   const { data } = await getNews(1, locale);
-  console.log(data);
 
 
 

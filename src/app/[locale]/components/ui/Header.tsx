@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl"
-import Link from "next-intl/link"
 import { LinksPage } from "./LinksPage"
 
 export const Header = () => {
