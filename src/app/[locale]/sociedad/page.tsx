@@ -32,7 +32,6 @@ const getOpinionNews = async (start = 1, locale = "", pageSize = 10) => {
     };
 
     const { data } = await fetchApi(path, urlParamsObjet);
-    throw Error('error')
     return {
         data,
     };
