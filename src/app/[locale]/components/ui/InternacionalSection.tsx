@@ -14,7 +14,7 @@ const getNews = async (start = 1, locale = "", pageSize = 4) => {
             createdAt: "asc",
         },
         filters: {
-            filtros: 'manavox',
+            filtros: 'internacional',
         },
         pagination: {
             page: start,
@@ -31,7 +31,7 @@ const getNews = async (start = 1, locale = "", pageSize = 4) => {
 };
 
 
-export default async function ManavoxSection() {
+export default async function InternacionalSection() {
 
     const locale = useLocale()
     const { data } = await getNews(1, locale, 9)

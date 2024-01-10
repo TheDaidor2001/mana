@@ -19,8 +19,8 @@ export default function notFound() {
       </h1>
       <Link
         href="/"
-       locale={locale}
-        className="bg-secondary px-10 py-2 lg:px-20 lg:py-2 rounded-md mt-5 text-white font-semibold text-lg text-center"
+        locale={locale}
+        className="bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 ease-in-out px-10 py-2 lg:px-20 lg:py-2 rounded-md mt-5 text-white font-semibold text-lg text-center"
       >
         Volver al inicio
       </Link>

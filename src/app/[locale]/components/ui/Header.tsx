@@ -10,7 +10,7 @@ export const Header = () => {
             <LinksPage urlPath="/sociedad" text={t('header-text-3')} />
             <LinksPage urlPath="/economia" text={t('header-text-4')} />
             <LinksPage urlPath="/geopolitica" text={t('header-text-5')} />
-            <LinksPage urlPath="/manavox" text={t('header-text-6')} />
+            <LinksPage urlPath="/internacional" text={t('header-text-6')} />
 
         </section>
     )

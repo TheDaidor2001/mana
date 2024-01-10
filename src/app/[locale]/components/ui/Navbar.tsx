@@ -53,12 +53,12 @@ function Navbar(props: Props) {
               <Close classes="w-8 h-8" />
             </div>
             <div className="flex flex-col gap-5 mt-20">
-              <LinksPage classes="font-semibold text-md lg:text-xl" urlPath="/deportes" text={t('header-text-1')} click={() => setToggle(!toggle)} />
-              <LinksPage classes="font-semibold text-md lg:text-xl" urlPath="/ranking-nacional" text={t('header-text-2')} click={() => setToggle(!toggle)} />
-              <LinksPage classes="font-semibold text-md lg:text-xl" urlPath="/sociedad" text={t('header-text-3')} click={() => setToggle(!toggle)} />
-              <LinksPage classes="font-semibold text-md lg:text-xl" urlPath="/economia" text={t('header-text-4')} click={() => setToggle(!toggle)} />
-              <LinksPage classes="font-semibold text-md lg:text-xl" urlPath="/geopolitica" text={t('header-text-5')} click={() => setToggle(!toggle)} />
-              <LinksPage classes="font-semibold text-md lg:text-xl" urlPath="/manavox" text={t('header-text-6')} click={() => setToggle(!toggle)} />
+              <LinksPage classes="font-semibold text-md lg:text-lg border-b border-gray-400 pb-1" urlPath="/deportes" text={t('header-text-1')} click={() => setToggle(!toggle)} />
+              <LinksPage classes="font-semibold text-md lg:text-lg border-b border-gray-400 pb-1" urlPath="/ranking-nacional" text={t('header-text-2')} click={() => setToggle(!toggle)} />
+              <LinksPage classes="font-semibold text-md lg:text-lg border-b border-gray-400 pb-1" urlPath="/sociedad" text={t('header-text-3')} click={() => setToggle(!toggle)} />
+              <LinksPage classes="font-semibold text-md lg:text-lg border-b border-gray-400 pb-1" urlPath="/economia" text={t('header-text-4')} click={() => setToggle(!toggle)} />
+              <LinksPage classes="font-semibold text-md lg:text-lg border-b border-gray-400 pb-1" urlPath="/geopolitica" text={t('header-text-5')} click={() => setToggle(!toggle)} />
+              <LinksPage classes="font-semibold text-md lg:text-lg border-b border-gray-400 pb-1" urlPath="/manavox" text={t('header-text-6')} click={() => setToggle(!toggle)} />
             </div>
           </section>
         )}

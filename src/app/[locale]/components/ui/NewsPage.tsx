@@ -10,7 +10,7 @@ import DeportesSection from "./DeportesSection";
 import EmpresaSection from './EmpresaSection';
 import { Header } from "./Header";
 import { EconomiaSection } from "./EconomiaSection";
-import ManavoxSection from "./ManavoxSection";
+import InternacionalSection from "./InternacionalSection";
 
 
 const getNews = async (start = 1, locale = "", pageSize = 3) => {
@@ -149,7 +149,7 @@ export default async function NewsPage() {
 
       <EconomiaSection />
 
-      <ManavoxSection />
+      <InternacionalSection />
     </main>
   )
 }
