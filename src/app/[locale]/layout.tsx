@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: 'Malabo Nation - Web infomativa en Guinea Ecuatorial',
   description: 'Somos una web de noticias e información en Guinea Ecuatorial. Toda la información del Pais en malabo nation.',
   keywords: 'Malabo Nation, Guinea Ecuatorial, Web infomativa, Noticias, Información, Actualidad, prensa',
+  openGraph: {
+    images: [`https://mana-ruby.vercel.app/`],
+  },
 }
 
 export default function RootLayout({ children, params }: Props) {
