@@ -52,7 +52,7 @@ async function DeportesPage() {
                 <article className=" border-b border-gray-600 flex flex-col lg:flex-row space-y-10 py-10">
                     <div className="m-auto">
                         <h1 className="text-3xl lg:text-4xl font-extrabold text-pretty">{data[0].attributes.titulo}</h1>
-                        <p className="mt-10 text-lg text-gray-800 font-light text-balance">{data[0].attributes.subtitulo}</p>
+                        <p className="mt-10 text-lg text-gray-800 font-light text-balance mb-10">{data[0].attributes.subtitulo}</p>
                         <ButtonLink href={`/news/${data[0].attributes.slug}`} locale={locale} />
                     </div>
                     <Image
