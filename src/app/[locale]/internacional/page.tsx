@@ -9,8 +9,8 @@ import { TopTextPages } from "../components/ui/TopTextPages";
 
 
 export const metadata = {
-    title: 'Malabo Nations - Manavox',
-    description: 'Las ultimas noticias de Manavox nacional e internacional en Malabo Nations',
+    title: 'Malabo Nations - Internacional',
+    description: 'Las ultimas noticias internacionales en Malabo Nations',
 };
 
 
@@ -32,6 +32,7 @@ const getOpinionNews = async (start = 1, locale = "", pageSize = 10) => {
     };
 
     const { data } = await fetchApi(path, urlParamsObjet);
+
 
     return {
         data,
