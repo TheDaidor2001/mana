@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Noticia } from "@/interfaces/noticia.interfaces";
 import ArticleNews from "../components/ui/ArticleNews";
 import { TopTextPages } from '../components/ui/TopTextPages';
+import { ButtonLink } from "../components/ui/ButtonLink";
 
 
 export const metadata = {
@@ -52,6 +53,7 @@ async function DeportesPage() {
                     <div className="m-auto">
                         <h1 className="text-3xl lg:text-4xl font-extrabold text-pretty">{data[0].attributes.titulo}</h1>
                         <p className="mt-10 text-lg text-gray-800 font-light text-balance">{data[0].attributes.subtitulo}</p>
+                        <ButtonLink href={`/news/${data[0].attributes.slug}`} locale={locale} />
                     </div>
                     <Image
                         height={500}

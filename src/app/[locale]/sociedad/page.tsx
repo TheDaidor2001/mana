@@ -5,6 +5,7 @@ import { Noticia } from "@/interfaces/noticia.interfaces";
 import ArticleNews from "../components/ui/ArticleNews";
 import TitleNew from "../components/ui/TitleNew";
 import { TopTextPages } from "../components/ui/TopTextPages";
+import { ButtonLink } from "../components/ui/ButtonLink";
 
 
 export const metadata = {
@@ -53,6 +54,7 @@ async function Sociedad() {
                         <h1 className="border-b text-xl text-text-pretty font-extrabold mb-10">Última Noticia</h1>
                         <TitleNew slug={data[0].attributes.slug} classes='text-4xl' title={data[0].attributes.titulo} />
                         <p className="mt-5 text-lg text-gray-800 font-light text-balance">{data[0].attributes.subtitulo}</p>
+                        <ButtonLink href={`/news/${data[0].attributes.slug}`} locale={locale} />
                     </div>
                     <Image
                         height={500}
